@@ -1,17 +1,13 @@
-import styles from './AppBar.module.css'
-
 export default function AppBar() {
     return (
-      <div className={styles.container}>
-        <p className={styles.icon}>🔍</p>
-        <div className={styles.profile}>
-          <div className={styles.name}>
-            <h3 className={styles.h3}>Muhammad Tharreq An Nahl</h3>
-            <p className={styles.name.p}>Assistant</p>
+      <div className="bg-white w-full shadow-md rounded-lg flex justify-between p-4">
+        <div className="w-fit self-center text-3xl">☀️</div>
+        <div className="flex gap-4 basis-full justify-end items-center">
+          <div className="flex flex-col items-end">
+            <p className="text-[#6E6B7B] font-bold">Alifia Mutia</p>
+            <p className="text-[#6E6B7B] font-normal">Selasa, Shift 2 | Kelompok 36</p>
           </div>
-          <div className={styles.pictureProfile}>
-            <img src="src\assets\3d_avatar_20.png" alt="" />
-          </div>
+          <img src="src\assets\3d_avatar_20.png" alt="picture-profile" />
         </div>
       </div>
     )
