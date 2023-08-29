@@ -1,7 +1,15 @@
+import React from 'react';
+import ModuleCard from './ModuleCard';
+
 export default function TA() {
     return (
-        <div className="w-full h-full flex flex-col gap-4 bg-pink-100 items-center justify-center">
-            <h1 className="text-6xl">HALAMAN TES AWAL</h1>
-        </div>
-    )
+    <div className="w-full h-full flex flex-col gap-4">
+        <ModuleCard title="MODUL 1 - Searching tes awal" status="Open" />
+        <ModuleCard title="MODUL 2 - Knowledge Representation" status="Open" />
+        <ModuleCard title="MODUL 3 - Fuzzyfikasi" status="Open" />
+        <ModuleCard title="MODUL 4 - Fuzzyfikasi: Mamdani" status="Open" />
+        <ModuleCard title="MODUL 5 - Fuzzyfikasi: Sugeno" status="Open" />
+        <ModuleCard title="MODUL 6 - Algoritma Genetika" status="Open" />
+    </div>
+    );
 }
