@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import ModuleCard from './ModuleCard';
 
 export default function TP() {
