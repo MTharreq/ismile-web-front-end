@@ -8,14 +8,14 @@ export default function Sidebar() {
 
             {/* LIST-BUTTON */}
             <div className="flex flex-col gap-4 py-4 ">
-                <div className="transition font-bold bg-white hover:bg-[#4DD7BE] hover:text-white hover:shadow-md mx-4 px-4 py-3 rounded-lg text-slate-800 flex gap-2 text-sm items-center active:bg-[#4DD7BE] cursor-pointer">
+                <Link to="/tugas-pendahuluan" className="transition font-bold bg-white hover:bg-[#4DD7BE] hover:text-white hover:shadow-md mx-4 px-4 py-3 rounded-lg text-slate-800 flex gap-2 text-sm items-center active:bg-[#4DD7BE] cursor-pointer">
                     <span className="material-symbols-rounded">library_books</span>
                     Tugas Pendahuluan
-                </div>
-                <div className="transition font-bold bg-white hover:bg-[#4DD7BE] hover:text-white hover:shadow-md mx-4 px-4 py-3 rounded-lg text-slate-800 flex gap-2 text-sm items-center active:bg-[#4DD7BE] cursor-pointer">
+                </Link>
+                <Link to="/tugas-awal" className="transition font-bold bg-white hover:bg-[#4DD7BE] hover:text-white hover:shadow-md mx-4 px-4 py-3 rounded-lg text-slate-800 flex gap-2 text-sm items-center active:bg-[#4DD7BE] cursor-pointer">
                     <span className="material-symbols-rounded">library_books</span>
                     Tes Awal
-                </div>
+                </Link>
                 <div className="transition font-bold bg-white hover:bg-[#4DD7BE] hover:text-white hover:shadow-md mx-4 px-4 py-3 rounded-lg text-slate-800 flex gap-2 text-sm items-center active:bg-[#4DD7BE] cursor-pointer">
                     <span className="material-symbols-rounded">laptop_chromebook</span>
                     Jurnal
