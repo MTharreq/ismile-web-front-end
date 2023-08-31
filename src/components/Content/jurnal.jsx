@@ -1,7 +1,7 @@
 import React from "react";
 import ModuleCard from './ModuleCard';
 
-export default function TP() {
+export default function Jurnal() {
     const moduleStatus = ({
         "MODUL 1": "Open",
         "MODUL 2": "Open",
@@ -12,21 +12,21 @@ export default function TP() {
     });
 
     const moduleLinks = ({
-        "MODUL 1": "https://example.com/module1tp",
-        "MODUL 2": "https://example.com/module2tp",
-        "MODUL 3": "https://example.com/module3tp",
-        "MODUL 4": "https://example.com/module4tp",
-        "MODUL 5": "https://example.com/module5tp",
-        "MODUL 6": "https://example.com/module6tp",
+        "MODUL 1": "https://example.com/module1jurnal",
+        "MODUL 2": "https://example.com/module2jurnal",
+        "MODUL 3": "https://example.com/module3jurnal",
+        "MODUL 4": "https://example.com/module4jurnal",
+        "MODUL 5": "https://example.com/module5jurnal",
+        "MODUL 6": "https://example.com/module6jurnal",
     });
 
     const moduleLastUpdate =({
-        "MODUL 1": "Sat, 13 July 19:20",
-        "MODUL 2": "Sat, 13 July 19:21",
-        "MODUL 3": "Sat, 13 July 19:22",
-        "MODUL 4": "Sat, 13 July 19:23",
-        "MODUL 5": "Sat, 13 July 19:24",
-        "MODUL 6": "Sat, 13 July 19:25",
+        "MODUL 1": "Sat, 13 July 19:32",
+        "MODUL 2": "Sat, 13 July 19:33",
+        "MODUL 3": "Sat, 13 July 19:34",
+        "MODUL 4": "Sat, 13 July 19:35",
+        "MODUL 5": "Sat, 13 July 19:36",
+        "MODUL 6": "Sat, 13 July 19:37",
     })
 
     return (

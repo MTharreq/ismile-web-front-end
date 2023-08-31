@@ -1,7 +1,7 @@
-export default function AppBar() {
+export default function AppBar({pageTitle}) {
     return (
       <div className="bg-white w-full shadow-md rounded-lg flex justify-between p-4">
-        <div className="w-fit self-center text-3xl">☀️</div>
+        <div className="bg-red w-full self-center text-2xl">{pageTitle}</div>
         <div className="flex gap-4 basis-full justify-end items-center">
           <div className="flex flex-col items-end">
             <p className="text-[#6E6B7B] font-bold">Alifia Mutia</p>
