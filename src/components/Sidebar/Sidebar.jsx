@@ -24,10 +24,10 @@ export default function Sidebar() {
                     <span className="material-symbols-rounded">slideshow</span>
                     Modul Praktikum
                 </div>
-                <div className="transition font-bold bg-white hover:bg-[#4DD7BE] hover:text-white hover:shadow-md mx-4 px-4 py-3 rounded-lg text-slate-800 flex gap-2 text-sm items-center active:bg-[#4DD7BE] cursor-pointer">
+                <Link to="/" className="transition font-bold bg-white hover:bg-[#4DD7BE] hover:text-white hover:shadow-md mx-4 px-4 py-3 rounded-lg text-slate-800 flex gap-2 text-sm items-center active:bg-[#4DD7BE] cursor-pointer">
                     <span className="material-symbols-rounded">search</span>
                     About i-Smile 8
-                </div>
+                </Link>
             
             </div>
         </div>
