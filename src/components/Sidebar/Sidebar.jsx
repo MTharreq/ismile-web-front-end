@@ -26,7 +26,7 @@ export default function Sidebar({setPageTitle}) {
                     Jurnal
                 </Link>
                 
-                <a href="https://drive.google.com/file/d/1ZbEN7-_Bd2Zv0Slb-aHuOabnwMjCgZ2w/view?usp=drive_link"className="transition font-bold bg-white hover:bg-[#4DD7BE] hover:text-white hover:shadow-md mx-4 px-4 py-3 rounded-lg text-slate-800 flex gap-2 text-sm items-center active:bg-[#4DD7BE] cursor-pointer">
+                <a href="https://drive.google.com/file/d/1ZbEN7-_Bd2Zv0Slb-aHuOabnwMjCgZ2w/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="transition font-bold bg-white hover:bg-[#4DD7BE] hover:text-white hover:shadow-md mx-4 px-4 py-3 rounded-lg text-slate-800 flex gap-2 text-sm items-center active:bg-[#4DD7BE] cursor-pointer">
                     <span className="material-symbols-rounded">slideshow</span>
                     Modul Praktikum
                 </a>

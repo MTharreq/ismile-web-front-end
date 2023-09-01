@@ -8,7 +8,7 @@ import About from "../components/Content/About";
 import Jurnal from "../components/Content/jurnal";
 
 export default function App() {
-    const [pageTitle, setPageTitle] = useState("About");
+    const [pageTitle, setPageTitle] = useState("");
     return (
         <BrowserRouter>
             <div className="flex flex-row">

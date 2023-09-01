@@ -11,15 +11,6 @@ export default function TA() {
         "MODUL 6": "Open",
     });
 
-    const moduleLinks = ({
-        "MODUL 1": "https://example.com/module1ta",
-        "MODUL 2": "https://example.com/module2ta",
-        "MODUL 3": "https://example.com/module3ta",
-        "MODUL 4": "https://example.com/module4ta",
-        "MODUL 5": "https://example.com/module5ta",
-        "MODUL 6": "https://example.com/module6ta",
-    });
-
     const moduleLastUpdate =({
         "MODUL 1": "Sat, 13 July 19:26",
         "MODUL 2": "Sat, 13 July 19:27",
@@ -31,12 +22,12 @@ export default function TA() {
 
     return (
         <div className="w-full h-full flex flex-col gap-4">
-            <ModuleCard title="MODUL 1 - Searching" status={moduleStatus["MODUL 1"]} link={moduleLinks["MODUL 1"]} lastUpdated={moduleLastUpdate["MODUL 1"]}/>
-            <ModuleCard title="MODUL 2 - Knowledge Representation" status={moduleStatus["MODUL 2"]} link={moduleLinks["MODUL 2"]} lastUpdated={moduleLastUpdate["MODUL 2"]}/>
-            <ModuleCard title="MODUL 3 - Fuzzyfikasi" status={moduleStatus["MODUL 3"]} link={moduleLinks["MODUL 3"]} lastUpdated={moduleLastUpdate["MODUL 3"]}/>
-            <ModuleCard title="MODUL 4 - Fuzzyfikasi: Mamdani" status={moduleStatus["MODUL 4"]} link={moduleLinks["MODUL 4"]} lastUpdated={moduleLastUpdate["MODUL 4"]}/>
-            <ModuleCard title="MODUL 5 - Fuzzyfikasi: Sugeno" status={moduleStatus["MODUL 5"]} link={moduleLinks["MODUL 5"]} lastUpdated={moduleLastUpdate["MODUL 5"]}/>
-            <ModuleCard title="MODUL 6 - Algoritma Genetika" status={moduleStatus["MODUL 6"]} link={moduleLinks["MODUL 6"]} lastUpdated={moduleLastUpdate["MODUL 6"]}/>
+            <ModuleCard title="MODUL 1 - Searching" status={moduleStatus["MODUL 1"]} lastUpdated={moduleLastUpdate["MODUL 1"]}/>
+            <ModuleCard title="MODUL 2 - Knowledge Representation" status={moduleStatus["MODUL 2"]} lastUpdated={moduleLastUpdate["MODUL 2"]}/>
+            <ModuleCard title="MODUL 3 - Fuzzyfikasi" status={moduleStatus["MODUL 3"]} lastUpdated={moduleLastUpdate["MODUL 3"]}/>
+            <ModuleCard title="MODUL 4 - Fuzzyfikasi: Mamdani" status={moduleStatus["MODUL 4"]} lastUpdated={moduleLastUpdate["MODUL 4"]}/>
+            <ModuleCard title="MODUL 5 - Fuzzyfikasi: Sugeno" status={moduleStatus["MODUL 5"]} lastUpdated={moduleLastUpdate["MODUL 5"]}/>
+            <ModuleCard title="MODUL 6 - Algoritma Genetika" status={moduleStatus["MODUL 6"]} lastUpdated={moduleLastUpdate["MODUL 6"]}/>
         </div>
     );
 }
