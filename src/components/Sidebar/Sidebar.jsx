@@ -1,20 +1,21 @@
 /* eslint-disable react/prop-types */
 import { NavLink } from 'react-router-dom'
 
-export default function Sidebar({isSidebarOpen, setIsSidebarOpen}) {
+export default function Sidebar({setPageTitle, isSidebarOpen, setIsSidebarOpen}) {
     const itemStyle = "flex items-center p-2 rounded-lg gap-3 px-3 py-4"
     const activeItemStyle = `${itemStyle} bg-[#4DD7BE] text-white`
     const inactiveItemStyle = `${itemStyle} bg-white text-gray-900 hover:bg-[#CAF3EB] hover:text-[#1CAB43]`
     const itemsStyle = ({ isActive, isPending }) =>
         isPending ? "pending" : isActive ? `${activeItemStyle}` : `${inactiveItemStyle}`
 
+    const handleLinkClick = (title) => {
+        setPageTitle(title);
+    };
+
     return (
         <aside
         id="logo-sidebar"
         className={`fixed top-0 left-0 z-40 w-64 h-screen transition-transform ${isSidebarOpen ? '-translate-x-full' : 'translate-x-0'}`} aria-label="Sidebar" >
-        {/* className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform translate-x-0" aria-label="Sidebar" > */}
-        
-
             <div className="h-full px-3 py-4 overflow-y-auto bg-white">
                 
                 {/* iSmile Logo */}
@@ -37,19 +38,19 @@ export default function Sidebar({isSidebarOpen, setIsSidebarOpen}) {
                 {/* SIDEBAR LIST */}
                 <ul className="space-y-2 font-semibold text-gray-900">
                     <li>
-                        <NavLink to="/tugas-pendahuluan" className={itemsStyle}>
+                        <NavLink to="/tugas-pendahuluan" className={itemsStyle} onClick={() => handleLinkClick("Tugas Pendahuluan")}>
                             <span className="material-symbols-rounded">library_books</span>
                             <span>Tugas Pendahuluan</span>
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/tugas-awal" className={itemsStyle}>
+                        <NavLink to="/tugas-awal" className={itemsStyle} onClick={() => handleLinkClick("Tes Awal")}>
                             <span className="material-symbols-rounded">library_books</span>
                             <span>Tes Awal</span>
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/Jurnal" className={itemsStyle}>
+                        <NavLink to="/Jurnal" className={itemsStyle} onClick={() => handleLinkClick("Jurnal")}>
                             <span className="material-symbols-rounded">laptop_chromebook</span>
                             <span>Jurnal</span>
                         </NavLink>
@@ -61,8 +62,15 @@ export default function Sidebar({isSidebarOpen, setIsSidebarOpen}) {
                             <span>Modul Praktikum</span>
                         </NavLink>
                     </li>
+
+                    {/* PUNYA HILMY */}
+                    {/* <a href="https://drive.google.com/file/d/1ZbEN7-_Bd2Zv0Slb-aHuOabnwMjCgZ2w/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="transition font-bold bg-white hover:bg-[#4DD7BE] hover:text-white hover:shadow-md mx-4 px-4 py-3 rounded-lg text-slate-800 flex gap-2 text-sm items-center active:bg-[#4DD7BE] cursor-pointer">
+                        <span className="material-symbols-rounded">slideshow</span>
+                        Modul Praktikum
+                    </a> */}
+
                     <li>
-                        <NavLink to="/" className={itemsStyle}>
+                        <NavLink to="/" className={itemsStyle} onClick={() => handleLinkClick("About")}>
                             <span className="material-symbols-rounded">search</span>
                             <span>About i-Smile 8</span>
                         </NavLink>

@@ -3,7 +3,7 @@ import Sidebar from "../components/Sidebar/Sidebar";
 import Container from "../components/Container/Container";
 import { useEffect, useRef, useState } from 'react';
 
-function App() {
+export default function App() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false)
 
     let menuRef = useRef()
@@ -24,14 +24,15 @@ function App() {
 
     })
 
+    const [pageTitle, setPageTitle] = useState("");
+
+
     return (
         <BrowserRouter>
         <div ref={menuRef}>
-            <Sidebar isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} />
-            <Container isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} />
+            <Sidebar setPageTitle={setPageTitle} isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen}/>
+            <Container pageTitle={pageTitle} isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} />
         </div>
         </BrowserRouter>
     )
 }
-
-export default App;

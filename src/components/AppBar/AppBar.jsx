@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
-export default function AppBar({isSidebarOpen, setIsSidebarOpen}) {
+export default function AppBar({pageTitle, isSidebarOpen, setIsSidebarOpen}) {
     return (
       <>
       <div className="bg-white w-full shadow-md rounded-lg flex justify-between p-4">
-        <button className="inline-flex items-center pl-1 pr-2 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+      <button className="inline-flex items-center pl-1 pr-2 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
           data-drawer-target="logo-sidebar"
           data-drawer-toggle="logo-sidebar"
           aria-controls="logo-sidebar"
@@ -25,6 +25,7 @@ export default function AppBar({isSidebarOpen, setIsSidebarOpen}) {
           />
           </svg>
         </button>
+        <div className="bg-red self-center text-2xl">{pageTitle}</div>
         <div className="flex basis-full gap-4 justify-end items-center text-sm">
           <div className="text-right">
             <p className="text-[#6E6B7B] font-bold">Alifia Mutia</p>

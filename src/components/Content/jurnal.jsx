@@ -1,7 +1,7 @@
 import React from "react";
 import ModuleCard from './ModuleCard';
 
-export default function TA() {
+export default function Jurnal() {
     const moduleStatus = ({
         "MODUL 1": "Open",
         "MODUL 2": "Open",
@@ -12,12 +12,12 @@ export default function TA() {
     });
 
     const moduleLastUpdate =({
-        "MODUL 1": "Sat, 13 July 19:26",
-        "MODUL 2": "Sat, 13 July 19:27",
-        "MODUL 3": "Sat, 13 July 19:28",
-        "MODUL 4": "Sat, 13 July 19:29",
-        "MODUL 5": "Sat, 13 July 19:30",
-        "MODUL 6": "Sat, 13 July 19:31",
+        "MODUL 1": "Sat, 13 July 19:32",
+        "MODUL 2": "Sat, 13 July 19:33",
+        "MODUL 3": "Sat, 13 July 19:34",
+        "MODUL 4": "Sat, 13 July 19:35",
+        "MODUL 5": "Sat, 13 July 19:36",
+        "MODUL 6": "Sat, 13 July 19:37",
     })
 
     return (
