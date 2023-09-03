@@ -1,45 +1,66 @@
-import React from 'react';
-
-export default function OverlayTP(props) {
-    const { moduleTitle, lastUpdate, moduleNumber, linkSoal, linkSubmit } = props;
-    const linkTemplate = "https://www.linkTemplate.com"
+/* eslint-disable react/prop-types */
+export default function OverlayTP({ moduleTitle, lastUpdate, moduleNumber }) {
     return (
-        <div className="w-full h-full shadow-md bg-white rounded-lg px-5">
-            <div className="h-auto m-8 mx-48">
-                <h1 className="text-xl text-[#D5546D] text-center">HARAP DIBACA</h1>
-                <p className="text-sm font-normal mt-3">
-                    1. Tugas Pendahuluan dikerjakan sesuai dengan NIM terakhir Praktikan.
-                    <br />
-                    Contoh: 1103211233 [mengerjakan soal NIM Ganjil]
-                    <br />
-                    Contoh: 1103211234 [mengerjakan soal NIM Genap]
-                </p>
-                <p className="text-sm font-normal mt-2">2. Tugas Pendahuluan dikerjakan menggunakan Template Tugas Pendahuluan di word dan dikumpulkan dalam format PDF</p>
-                <p className="text-sm font-normal mt-2">3. Jika terdapat soal yang memerlukan jawaban untuk ditulis manual maka jawaban dapat di foto/scan dan kemudian di masukan ke dalam File Tugas Pendahuluan.</p>
-                <p className="text-sm font-normal mt-2">4. Jawaban Tugas Pendahuluan diketik secara berurutan. Soal kemudian Jawaban.</p>
-                <p className="text-sm font-normal mt-2">
-                    5. Format penamaan file Tugas Pendahuluan sebagai berikut:
-                    <br /><strong>TP_NAMA_NIM_MODUL_HARI_SHIFT_KELOMPOK</strong>
-                    <br /><strong>Contoh: TP_MUHAMMAD HILMY AZIZ_1103190001_MODUL 1_RABU_SHIFT 2_13</strong>
-                </p>
-                <p className="text-sm font-normal mt-2">6. Tugas Pendahuluan dikumpulkan melalui website i-Smile dengan batas pengumpulan <strong>Hari Sabtu 23:59 WIB.</strong></p>
-                <p className="text-sm font-normal mt-2">7. Seluruh informasi kebutuhan untuk Praktikum Kecerdasan Buatan dapat diakses melalui Website i-Smile.</p>
+        <div className="flex flex-col w-full shadow-md bg-white rounded-lg p-4 gap-4 sm:px-6">
+            {/* INFO */}
+            <div className="px-6 py-4 lg:px-64">
+                <h1 className="text-lg text-[#D5546D] text-center mb-2">HARAP DIBACA</h1>
+                <ol type="1" className=" flex flex-col gap-2 list-decimal font-normal text-xs hyphens-manual sm:text-sm">
+                    <li className="">
+                        Tugas Pendahuluan dikerjakan sesuai dengan NIM terakhir Praktikan.<br />
+                        <b>Contoh:</b> 1103211233 [mengerjakan soal NIM Ganjil]<br />
+                        <b>Contoh:</b> 1103211234 [mengerjakan soal NIM Genap]
+                    </li>
+                    <li className="">
+                        Tugas Pendahuluan dikerjakan menggunakan Template Tugas Pendahuluan di word dan dikumpulkan dalam format PDF
+                    </li>
+                    <li className="">
+                        Jika terdapat soal yang memerlukan jawaban untuk ditulis manual maka jawaban dapat di foto/scan dan kemudian di masukan ke dalam File Tugas Pendahuluan.
+                    </li>
+                    <li className="">
+                        Jawaban Tugas Pendahuluan diketik secara berurutan. Soal kemudian Jawaban.
+                    </li>
+                    <li>
+                        Format penamaan file Tugas Pendahuluan sebagai berikut:<br />
+                        <b>TP_NAMA_NIM_MODUL_HARI_SHIFT&shy;_KELOMPOK</b><br />
+                        <b>Contoh: TP_MUHAMMAD HILMY AZIZ_1103190001_MODUL 1_RABU_SHIFT 2_13</b>
+                    </li>
+                    <li>
+                        Tugas Pendahuluan dikumpulkan melalui website i-Smile dengan batas pengumpulan <b>Hari Sabtu 23:59 WIB.</b>
+                    </li>
+                    <li>
+                        Seluruh informasi kebutuhan untuk Praktikum Kecerdasan Buatan dapat diakses melalui Website i-Smile.
+                    </li>
+                </ol>
             </div>
-            <hr className="mt-3 border-t-2 border-gray-300" />
-            <div className="flex items-center justify-between mt-2 ">
-                    <div className="">
-                        <p className="text-xs font-normal mt-2 text-[#1CAB43]">Tugas Pendahuluan</p>
-                        <p className="text-sm font-normal mt-2"><strong>Modul {moduleNumber}: {moduleTitle}</strong></p>
-                        <p className="text-xs font-normal mt-2">Due Date: Monday, 7 September 2023,23:59</p>
-                        <p className="text-xs font-normal mt-2">Time Remaining: 1 Hour 23 Min.</p>
-                        <p className="text-xs font-normal mt-2">Last Modified: {lastUpdate}</p>
+            
+            <hr className="border-[1px] border-gray-300" />
+            
+            {/* SUBMIT */}
+            <div className="flex justify-between py-2 gap-2">
+                    <div className="flex flex-col gap-1 basis-full">
+                        <p className="text-xs sm:text-sm font-normal text-[#1CAB43]">Tugas Pendahuluan</p>
+                        <h1 className="text-sm sm:text-lg font-bold">MODUL {moduleNumber}: {moduleTitle}</h1>
+                        <div className="flex">
+                            <div className="text-slate-500 flex flex-col gap-0.5 sm:gap-1">
+                                <p className="text-[10px] sm:text-xs font-semibold">Due Date &nbsp;&nbsp; </p>
+                                <p className="text-[10px] sm:text-xs font-semibold">Time Remaining &nbsp;&nbsp; </p>
+                                <p className="text-[10px] sm:text-xs font-semibold">Last Modified &nbsp;&nbsp; </p>
+                            </div>
+                            <div className="flex flex-col gap-0.5 sm:gap-1">
+                                <p className="text-[10px] sm:text-xs font-normal">: Monday, 7 September 2023,23:59</p>
+                                <p className="text-[10px] sm:text-xs font-normal">: 1 Hour 23 Min.</p>
+                                <p className="text-[10px] sm:text-xs font-normal">: {lastUpdate}</p>
+                            </div>
+                        </div>
                     </div>
-                    <div className="flex flex-col items-center pt-5">
-                    <a href="https://www.linkTemplate.com" target="_blank" rel="noopener noreferrer" className="bg-[#4DD7BE] text-white text-xs px-3 py-2 rounded mb-2">Template Tugas Pendahuluan</a>
-                    <a href={linkSoal} target="_blank" rel="noopener noreferrer" className="bg-[#4DD7BE] text-white text-xs px-7 py-2 rounded mb-2">Soal Tugas Pendahuluan</a>
-                    <a href={linkSubmit} target="_blank" rel="noopener noreferrer" className="text-black text-xs px-3 py-2 rounded mb-2">Submit File</a>
+                    <div className="flex flex-col w-40 sm:w-64 gap-2">
+                        <button className="p-2 bg-[#4DD7BE] text-white text-[10px] sm:text-sm rounded font-semibold shadow-md hover:shadow-none">Template Tugas Pendahuluan</button>
+                        <button className="p-2 bg-[#4DD7BE] text-white text-[10px] sm:text-sm rounded font-semibold shadow-md hover:shadow-none">Soal Tugas Pendahuluan</button>
+                        <button className="p-2 bg-white text-black text-[10px] sm:text-sm rounded font-semibold hover:ring-2 hover:ring-gray-300 flex items-center justify-center gap-1">Submit File <span className="material-symbols-rounded">upload</span></button>
                     </div>
-                </div>
             </div>
+
+        </div>
     )
 }

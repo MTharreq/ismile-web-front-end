@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import OverlayTP from './OverlayTP';
 
 export default function TP() {
