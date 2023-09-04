@@ -38,29 +38,28 @@ export default function OverlayTP({ moduleTitle, lastUpdate, moduleNumber }) {
             
             {/* SUBMIT */}
             <div className="flex justify-between py-2 gap-2">
-                    <div className="flex flex-col gap-1 basis-full">
-                        <p className="text-xs sm:text-sm font-normal text-[#1CAB43]">Tugas Pendahuluan</p>
-                        <h1 className="text-sm sm:text-lg font-bold">MODUL {moduleNumber}: {moduleTitle}</h1>
-                        <div className="flex">
-                            <div className="text-slate-500 flex flex-col gap-0.5 sm:gap-1">
-                                <p className="text-[10px] sm:text-xs font-semibold">Due Date &nbsp;&nbsp; </p>
-                                <p className="text-[10px] sm:text-xs font-semibold">Time Remaining &nbsp;&nbsp; </p>
-                                <p className="text-[10px] sm:text-xs font-semibold">Last Modified &nbsp;&nbsp; </p>
-                            </div>
-                            <div className="flex flex-col gap-0.5 sm:gap-1">
-                                <p className="text-[10px] sm:text-xs font-normal">: Monday, 7 September 2023,23:59</p>
-                                <p className="text-[10px] sm:text-xs font-normal">: 1 Hour 23 Min.</p>
-                                <p className="text-[10px] sm:text-xs font-normal">: {lastUpdate}</p>
-                            </div>
+                <div className="flex flex-col gap-1 basis-full">
+                    <p className="text-xs sm:text-sm font-normal text-[#1CAB43]">Tugas Pendahuluan</p>
+                    <h1 className="text-sm sm:text-lg font-bold">MODUL {moduleNumber}: {moduleTitle}</h1>
+                    <div className="flex">
+                        <div className="text-slate-500 flex flex-col gap-0.5 sm:gap-1">
+                            <p className="text-[10px] sm:text-xs font-semibold">Due Date &nbsp;&nbsp; </p>
+                            <p className="text-[10px] sm:text-xs font-semibold">Time Remaining &nbsp;&nbsp; </p>
+                            <p className="text-[10px] sm:text-xs font-semibold">Last Modified &nbsp;&nbsp; </p>
+                        </div>
+                        <div className="flex flex-col gap-0.5 sm:gap-1">
+                            <p className="text-[10px] sm:text-xs font-normal">: Monday, 7 September 2023,23:59</p>
+                            <p className="text-[10px] sm:text-xs font-normal">: 1 Hour 23 Min.</p>
+                            <p className="text-[10px] sm:text-xs font-normal">: {lastUpdate}</p>
                         </div>
                     </div>
-                    <div className="flex flex-col w-40 sm:w-64 gap-2">
-                        <button className="p-2 bg-[#4DD7BE] text-white text-[10px] sm:text-sm rounded font-semibold shadow-md hover:shadow-none">Template Tugas Pendahuluan</button>
-                        <button className="p-2 bg-[#4DD7BE] text-white text-[10px] sm:text-sm rounded font-semibold shadow-md hover:shadow-none">Soal Tugas Pendahuluan</button>
-                        <button className="p-2 bg-white text-black text-[10px] sm:text-sm rounded font-semibold hover:ring-2 hover:ring-gray-300 flex items-center justify-center gap-1">Submit File <span className="material-symbols-rounded">upload</span></button>
-                    </div>
+                </div>
+                <div className="flex flex-col w-40 sm:w-64 gap-2">
+                    <button className="p-2 bg-[#4DD7BE] text-white text-[10px] sm:text-sm rounded font-semibold shadow-md hover:shadow-none">Template Tugas Pendahuluan</button>
+                    <button className="p-2 bg-[#4DD7BE] text-white text-[10px] sm:text-sm rounded font-semibold shadow-md hover:shadow-none">Soal Tugas Pendahuluan</button>
+                    <button className="p-2 bg-white text-black text-[10px] sm:text-sm rounded font-semibold hover:ring-2 hover:ring-gray-300 flex items-center justify-center gap-1">Submit File <span className="material-symbols-rounded">upload</span></button>
+                </div>
             </div>
-
         </div>
     )
 }
