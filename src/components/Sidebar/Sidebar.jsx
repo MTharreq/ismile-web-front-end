@@ -1,16 +1,18 @@
 /* eslint-disable react/prop-types */
 import { NavLink } from 'react-router-dom'
 
-export default function Sidebar({setPageTitle, isSidebarOpen, setIsSidebarOpen}) {
+export default function Sidebar({setPageTitle, isSidebarOpen, setIsSidebarOpen, handleLinkSelect,selectedLink}) {
     const itemStyle = "flex items-center p-2 rounded-lg gap-3 px-3 py-4"
     const activeItemStyle = `${itemStyle} bg-[#4DD7BE] text-white`
     const inactiveItemStyle = `${itemStyle} bg-white text-gray-900 hover:bg-[#CAF3EB] hover:text-[#1CAB43]`
     const itemsStyle = ({ isActive, isPending }) =>
         isPending ? "pending" : isActive ? `${activeItemStyle}` : `${inactiveItemStyle}`
 
-    const handleLinkClick = (title) => {
+    const handleLinkClick = (title,link) => {
         setPageTitle(title);
+        handleLinkSelect(link);
     };
+    
 
     return (
         <aside
@@ -38,34 +40,34 @@ export default function Sidebar({setPageTitle, isSidebarOpen, setIsSidebarOpen})
                 {/* SIDEBAR LIST */}
                 <ul className="space-y-2 font-semibold text-gray-900">
                     <li>
-                        <NavLink to="/tugas-pendahuluan" className={itemsStyle} onClick={() => handleLinkClick("Tugas Pendahuluan")}>
+                    <button onClick={() => handleLinkClick("Tugas Pendahuluan", 'tugas-pendahuluan')} className={itemsStyle({ isActive: selectedLink === 'tugas-pendahuluan' })}>
                             <span className="material-symbols-rounded">library_books</span>
                             <span>Tugas Pendahuluan</span>
-                        </NavLink>
+                        </button>
                     </li>
                     <li>
-                        <NavLink to="/tugas-awal" className={itemsStyle} onClick={() => handleLinkClick("Tes Awal")}>
-                            <span className="material-symbols-rounded">library_books</span>
-                            <span>Tes Awal</span>
-                        </NavLink>
+                    <button
+                        onClick={() => handleLinkClick("Tes Awal", 'tes-awal')}
+                        className={itemsStyle({ isActive: selectedLink === 'tes-awal' })}
+                    >
+                        <span className="material-symbols-rounded">library_books</span>
+                        <span>Tes Awal</span>
+                    </button>
                     </li>
                     <li>
-                        <NavLink to="/Jurnal" className={itemsStyle} onClick={() => handleLinkClick("Jurnal")}>
-                            <span className="material-symbols-rounded">laptop_chromebook</span>
-                            <span>Jurnal</span>
-                        </NavLink>
+                    <button
+                        onClick={() => handleLinkClick("Jurnal", 'jurnal')}
+                        className={itemsStyle({ isActive: selectedLink === 'jurnal' })}
+                    >
+                        <span className="material-symbols-rounded">laptop_chromebook</span>
+                        <span>Jurnal</span>
+                    </button>
                     </li>
                     <li>
                         {/* https://drive.google.com/file/d/10p5KRz6ESrpCfuPPxwJOgsdC8qutsmOf/view?usp=sharing */}
                         <NavLink to="https://drive.google.com/file/d/1ZbEN7-_Bd2Zv0Slb-aHuOabnwMjCgZ2w/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className={itemsStyle}>
                             <span className="material-symbols-rounded">slideshow</span>
                             <span>Modul Praktikum</span>
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/" className={itemsStyle} onClick={() => handleLinkClick("About")}>
-                            <span className="material-symbols-rounded">search</span>
-                            <span>About i-Smile 8</span>
                         </NavLink>
                     </li>
                 </ul>

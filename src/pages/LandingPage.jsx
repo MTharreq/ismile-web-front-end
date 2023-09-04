@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router-dom'
+
 export default function LandingPage() {
     return (
         <>
@@ -18,8 +20,8 @@ export default function LandingPage() {
                 {/* RIGHT ITEM */}
                 <div className="flex items-center gap-16">
                     <div className="hidden sm:flex gap-10 text-lg font-bold text-[#515151]">
-                        <a href="#" className="font-mono">About Lab</a>
-                        <a href="#" className="font-mono">Assistant</a>
+                        <NavLink to="/app" className="font-mono">About Lab</NavLink>
+                        {/* <a href="#" className="font-mono">Assistant</a> */}
                     </div>
                         <button className="bg-[#1CAB43] rounded-lg text-white px-4 py-3 font-bold text-sm sm:text-base">
                             LOGIN

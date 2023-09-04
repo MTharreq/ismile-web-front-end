@@ -1,34 +1,35 @@
-import { BrowserRouter } from 'react-router-dom';
-import Sidebar from "../components/Sidebar/Sidebar";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useState,useEffect } from 'react';
 import Container from "../components/Container/Container";
-import { useEffect, useRef, useState } from 'react';
+import LandingPage from './LandingPage';
+import TP from '../components/Content/TP';
+import TA from '../components/Content/TA';
+import Jurnal from '../components/Content/Jurnal';
 
 export default function App() {
-    const [isSidebarOpen, setIsSidebarOpen] = useState(false)
-
-    // DOESNT WORK
-    // let menuRef = useRef()
-    // useEffect(() => {
-    //     let handler = (e) => {
-    //         if(!menuRef.current.contains(e.target)){
-    //             setIsSidebarOpen(false)
-    //             console.log(isSidebarOpen)
-    //         }
-    //     }
-    //     document.addEventListener('mousedown', handler)
-    //     return() => {
-    //         document.removeEventListener('mousedown', handler)
-    //     }
-    // })
-
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const [pageTitle, setPageTitle] = useState("");
+    useEffect(() => {
+        console.log('app component mounted');
+        // ... other code
+    }, []);
 
     return (
         <BrowserRouter>
-        {/* <div ref={menuRef}> */}
-            <Sidebar setPageTitle={setPageTitle} isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen}/>
-            <Container pageTitle={pageTitle} isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} />
-        {/* </div> */}
+        <Routes>
+            <Route path="/" element={<LandingPage />}/>
+            <Route
+            path="app/*"
+            element={
+                <Container
+                pageTitle={pageTitle}
+                isSidebarOpen={isSidebarOpen}
+                setIsSidebarOpen={setIsSidebarOpen}
+                setPageTitle={setPageTitle}
+                />
+            }
+            />
+        </Routes>
         </BrowserRouter>
-    )
+    );
 }
