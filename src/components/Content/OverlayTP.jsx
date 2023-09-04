@@ -60,7 +60,6 @@ export default function OverlayTP({ moduleTitle, lastUpdate, moduleNumber,linkSo
                         <a className="p-2 bg-white text-black text-[10px] sm:text-sm rounded font-semibold hover:ring-2 hover:ring-gray-300 flex items-center justify-center gap-1 " href={linkSubmit}>Submit File <span className="material-symbols-rounded">upload</span></a>
                     </div>
             </div>
-
         </div>
     )
 }
