@@ -40,28 +40,28 @@ export default function Sidebar({setPageTitle, isSidebarOpen, setIsSidebarOpen, 
                 {/* SIDEBAR LIST */}
                 <ul className="space-y-2 font-semibold text-gray-900">
                     <li>
-                    <button onClick={() => handleLinkClick("Tugas Pendahuluan", 'tugas-pendahuluan')} className={itemsStyle({ isActive: selectedLink === 'tugas-pendahuluan' })}>
+                        <button onClick={() => handleLinkClick("Tugas Pendahuluan", 'tugas-pendahuluan')} className={itemsStyle({ isActive: selectedLink === 'tugas-pendahuluan' })}>
                             <span className="material-symbols-rounded">library_books</span>
                             <span>Tugas Pendahuluan</span>
                         </button>
                     </li>
                     <li>
-                    <button
-                        onClick={() => handleLinkClick("Tes Awal", 'tes-awal')}
-                        className={itemsStyle({ isActive: selectedLink === 'tes-awal' })}
-                    >
-                        <span className="material-symbols-rounded">library_books</span>
-                        <span>Tes Awal</span>
-                    </button>
+                        <button
+                            onClick={() => handleLinkClick("Tes Awal", 'tes-awal')}
+                            className={itemsStyle({ isActive: selectedLink === 'tes-awal' })}
+                        >
+                            <span className="material-symbols-rounded">library_books</span>
+                            <span>Tes Awal</span>
+                        </button>
                     </li>
                     <li>
-                    <button
-                        onClick={() => handleLinkClick("Jurnal", 'jurnal')}
-                        className={itemsStyle({ isActive: selectedLink === 'jurnal' })}
-                    >
-                        <span className="material-symbols-rounded">laptop_chromebook</span>
-                        <span>Jurnal</span>
-                    </button>
+                        <button
+                            onClick={() => handleLinkClick("Jurnal", 'jurnal')}
+                            className={itemsStyle({ isActive: selectedLink === 'jurnal' })}
+                        >
+                            <span className="material-symbols-rounded">laptop_chromebook</span>
+                            <span>Jurnal</span>
+                        </button>
                     </li>
                     <li>
                         {/* https://drive.google.com/file/d/10p5KRz6ESrpCfuPPxwJOgsdC8qutsmOf/view?usp=sharing */}
@@ -69,6 +69,24 @@ export default function Sidebar({setPageTitle, isSidebarOpen, setIsSidebarOpen, 
                             <span className="material-symbols-rounded">slideshow</span>
                             <span>Modul Praktikum</span>
                         </NavLink>
+                    </li>
+                    <li>
+                        <button
+                            onClick={() => handleLinkClick("Pilih Grup", 'pilih-grup')}
+                            className={itemsStyle({ isActive: selectedLink === 'input-grup' })}
+                        >
+                            <span className="material-symbols-rounded">laptop_chromebook</span>
+                            <span>Pilih Grup</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button
+                            onClick={() => handleLinkClick("Input Nilai", 'input-nilai')}
+                            className={itemsStyle({ isActive: selectedLink === 'input-nilai' })}
+                        >
+                            <span className="material-symbols-rounded">laptop_chromebook</span>
+                            <span>Input Nilai</span>
+                        </button>
                     </li>
                 </ul>
             </div>
