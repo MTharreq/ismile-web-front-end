@@ -63,6 +63,24 @@ export default function Sidebar({setPageTitle, isSidebarOpen, setIsSidebarOpen, 
                         <span>Jurnal</span>
                     </button>
                     </li>
+                    <li>
+                        <button
+                            onClick={() => handleLinkClick("Pilih Grup", 'pilih-grup')}
+                            className={itemsStyle({ isActive: selectedLink === 'input-grup' })}
+                        >
+                            <span className="material-symbols-rounded">laptop_chromebook</span>
+                            <span>Pilih Grup</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button
+                            onClick={() => handleLinkClick("Input Nilai", 'input-nilai')}
+                            className={itemsStyle({ isActive: selectedLink === 'input-nilai' })}
+                        >
+                            <span className="material-symbols-rounded">laptop_chromebook</span>
+                            <span>Input Nilai</span>
+                        </button>
+                    </li>
                 </ul>
             </div>
         </aside>

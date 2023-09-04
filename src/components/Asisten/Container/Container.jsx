@@ -5,6 +5,8 @@ import TA from "../Content/TA";
 import Jurnal from "../Content/Jurnal";
 import Profile from "../Content/Profile";
 import Sidebar from "../Sidebar/Sidebar"
+import PilihGrup from "../Content/PilihGrup";
+import InputNilai from "../Content/InputNilai";
 
 export default function ContainerAs({ pageTitle, isSidebarOpen, setIsSidebarOpen, setPageTitle }) {
   const [selectedLink, setSelectedLink] = useState(null);
@@ -20,6 +22,8 @@ export default function ContainerAs({ pageTitle, isSidebarOpen, setIsSidebarOpen
         {selectedLink === 'tugas-pendahuluan' && <TP />}
         {selectedLink === 'tes-awal' && <TA />}
         {selectedLink === 'jurnal' && <Jurnal />}
+        {selectedLink === 'pilih-grup' && <PilihGrup />}
+        {selectedLink === 'input-nilai' && <InputNilai />}
       </div>
     </div>
   );
