@@ -32,6 +32,8 @@ export default function TP() {
         "MODUL 6": "Sat, 13 July 19:25",
     });
 
+    const linkTemplate = "https://www.linktemplatetp.com"
+
     const linkSoal = {
         "MODUL 1": "https://www.soaltp1.com",
         "MODUL 2": "https://www.soaltp2.com",
@@ -65,6 +67,7 @@ export default function TP() {
         moduleNumber={selectedModule.split(' ')[1]}
         linkSoal={linkSoal[selectedModule]}
         linkSubmit={linkSubmit[selectedModule]}
+        linkTemplate={linkTemplate}
         />
         )}
         {
@@ -103,6 +106,7 @@ export default function TP() {
         moduleNumber={selectedModule.split(' ')[1]}
         linkSoal={linkSoal[selectedModule]}
         linkSubmit={linkSubmit[selectedModule]}
+        linkTemplate={linkTemplate}
         />
         )}
         {
@@ -141,6 +145,7 @@ export default function TP() {
         moduleNumber={selectedModule.split(' ')[1]}
         linkSoal={linkSoal[selectedModule]}
         linkSubmit={linkSubmit[selectedModule]}
+        linkTemplate={linkTemplate}
         />
         )}
         {
@@ -179,6 +184,7 @@ export default function TP() {
         moduleNumber={selectedModule.split(' ')[1]}
         linkSoal={linkSoal[selectedModule]}
         linkSubmit={linkSubmit[selectedModule]}
+        linkTemplate={linkTemplate}
         />
         )}
         {
@@ -217,6 +223,7 @@ export default function TP() {
         moduleNumber={selectedModule.split(' ')[1]}
         linkSoal={linkSoal[selectedModule]}
         linkSubmit={linkSubmit[selectedModule]}
+        linkTemplate={linkTemplate}
         />
         )}
         {
@@ -255,6 +262,7 @@ export default function TP() {
         moduleNumber={selectedModule.split(' ')[1]}
         linkSoal={linkSoal[selectedModule]}
         linkSubmit={linkSubmit[selectedModule]}
+        linkTemplate={linkTemplate}
         />
         )}
         {

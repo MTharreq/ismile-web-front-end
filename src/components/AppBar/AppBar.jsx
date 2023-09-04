@@ -1,5 +1,13 @@
 /* eslint-disable react/prop-types */
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 export default function AppBar({pageTitle, isSidebarOpen, setIsSidebarOpen}) {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
     return (
       <>
       <div className="bg-white w-full shadow-md rounded-lg flex justify-between p-4">
@@ -31,7 +39,24 @@ export default function AppBar({pageTitle, isSidebarOpen, setIsSidebarOpen}) {
             <p className="text-[#6E6B7B] font-bold text-xs hidden sm:block">Alifia Mutia</p>
             <p className="text-[#6E6B7B] font-normal text-xs hidden sm:block">Selasa, Shift 2 | Kelompok 36</p>
           </div>
-          <img src="src\assets\3d_avatar_20.png" alt="picture-profile" />
+          <img
+          src="src\assets\3d_avatar_20.png"
+          alt="picture-profile"
+          onClick={toggleDropdown}
+          className="cursor-pointer"
+        />
+        {isDropdownOpen && (
+          <div className="absolute top-24 right-4 bg-white border border-gray-200 shadow-md p-2 rounded-lg">
+            {/* Dropdown content */}
+            <ul className="font-normal text-xs">
+              <li className='mb-1'><Link to="/profile">Profile</Link></li>
+              <li className='mb-1'><Link to="/change-pass">Change Password</Link></li>
+              <hr className="border-[1px] border-gray-300 mb-1" />
+              <li className="font-semibold text-[#D5546D] mb-1">Log Out</li>
+              {/* Add more menu items as needed */}
+            </ul>
+          </div>
+        )}
         </div>
       </div>
       </>

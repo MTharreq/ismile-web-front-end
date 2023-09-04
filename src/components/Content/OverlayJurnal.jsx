@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-export default function OverlayTP({ moduleTitle, lastUpdate, moduleNumber,linkSoal, linkSubmit,linkTemplate }) {
+export default function OverlayJurnal({ moduleTitle, lastUpdate, moduleNumber,linkSoal, linkSubmit,linkTemplate }) {
     return (
         <div className="flex flex-col w-full shadow-md bg-white rounded-lg p-4 gap-4 sm:px-6">
             {/* INFO */}
@@ -56,7 +56,7 @@ export default function OverlayTP({ moduleTitle, lastUpdate, moduleNumber,linkSo
                     </div>
                     <div className="flex flex-col w-40 sm:w-64 gap-2">
                         {/* <a className="p-2 bg-[#4DD7BE] text-white text-[10px] sm:text-sm rounded font-semibold shadow-md hover:shadow-none text-center" href={linkTemplate}>Template Tugas Pendahuluan</a> */}
-                        <a className="p-2 bg-[#4DD7BE] text-white text-[10px] sm:text-sm rounded font-semibold shadow-md hover:shadow-none text-center" href={linkSoal}>Soal Tugas Pendahuluan</a>
+                        <a className="p-2 bg-[#4DD7BE] text-white text-[10px] sm:text-sm rounded font-semibold shadow-md hover:shadow-none text-center" href={linkSoal}>Soal Jurnal</a>
                         <a className="p-2 bg-white text-black text-[10px] sm:text-sm rounded font-semibold hover:ring-2 hover:ring-gray-300 flex items-center justify-center gap-1 " href={linkSubmit}>Submit File <span className="material-symbols-rounded">upload</span></a>
                     </div>
             </div>

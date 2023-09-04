@@ -5,7 +5,8 @@ import About from "../Content/About";
 import TP from "../Content/TP";
 import TA from "../Content/TA";
 import Jurnal from "../Content/Jurnal";
-
+import ChangePassword from '../Content/ChangePassword';
+import Profile from "../Content/Profile"
 
 export default function Container({pageTitle, isSidebarOpen, setIsSidebarOpen}) {
   return (
@@ -17,6 +18,8 @@ export default function Container({pageTitle, isSidebarOpen, setIsSidebarOpen}) 
           <Route path="/tugas-pendahuluan" element={<TP />} />
           <Route path="/tugas-awal" element={<TA />} />
           <Route path="/jurnal" element={<Jurnal />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/change-pass" element={<ChangePassword />} />
       </Routes>
     </div>
   )
