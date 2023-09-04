@@ -1,5 +1,3 @@
-import { NavLink } from 'react-router-dom'
-
 export default function LandingPage() {
     return (
         <>
@@ -11,7 +9,7 @@ export default function LandingPage() {
             {/* HEADER */}
             <div className="flex justify-between px-4 sm:px-16 pt-6 pb-4 sticky top-0">
                 {/* iSmile Logo */}
-                <a href="#" ><img src="src\assets\logo\Vertical.jpg"
+                <a href="/" ><img src="src\assets\logo\Vertical.jpg"
                     className="h-12 sm:h-16"
                     alt="iSmile Logo"
                     />
@@ -41,7 +39,7 @@ export default function LandingPage() {
                             <p className="font-mono text-2xl text-[#515151]">Website untuk Praktikum mahasiswa Teknik Komputer Telkom University</p>
                         </div>
                         <div className="flex gap-6 self-start">
-                            <a href="/app">
+                            <a href="/praktikan">
                                 <button className="bg-[#2AE1AF] rounded-xl font-bold text-white py-2 px-8 text-xl">LOGIN</button>
                             </a>
                             <button className="border-2 border-[#2AE1AF] rounded-xl text-[#2AE1AF]">

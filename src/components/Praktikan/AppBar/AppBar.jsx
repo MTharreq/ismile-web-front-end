@@ -49,8 +49,7 @@ export default function AppBar({pageTitle, isSidebarOpen, setIsSidebarOpen}) {
           <div className="absolute top-24 right-4 bg-white border border-gray-200 shadow-md p-2 rounded-lg">
             {/* Dropdown content */}
             <ul className="font-normal text-xs">
-              <li className='mb-1'><Link to="/profile">Profile</Link></li>
-              <li className='mb-1'><Link to="/change-pass">Change Password</Link></li>
+              <li className='mb-1'>Profile</li>
               <hr className="border-[1px] border-gray-300 mb-1" />
               <a href="/">
                 <li className="font-semibold text-[#D5546D] mb-1">Log Out</li>

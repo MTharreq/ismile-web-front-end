@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
-import Container from "../components/Container/Container";
+import ContainerPr from "../components/Praktikan/Container/Container";
+import ContainerAs from "../components/Asisten/Container/Container";
 import LandingPage from './LandingPage';
 import Login from "./Login"
 export default function App() {
@@ -13,9 +14,20 @@ export default function App() {
             <Route path="/" element={<LandingPage />}/>
             <Route path="/login" element={<Login />}/>
             <Route
-            path="app/*"
+            path="praktikan/*"
             element={
-                <Container
+                <ContainerPr
+                pageTitle={pageTitle}
+                isSidebarOpen={isSidebarOpen}
+                setIsSidebarOpen={setIsSidebarOpen}
+                setPageTitle={setPageTitle}
+                />
+            }
+            />
+            <Route
+            path="asisten/*"
+            element={
+                <ContainerAs
                 pageTitle={pageTitle}
                 isSidebarOpen={isSidebarOpen}
                 setIsSidebarOpen={setIsSidebarOpen}

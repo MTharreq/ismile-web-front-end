@@ -6,7 +6,7 @@ import Jurnal from "../Content/Jurnal";
 import Profile from "../Content/Profile";
 import Sidebar from "../Sidebar/Sidebar"
 
-export default function Container({ pageTitle, isSidebarOpen, setIsSidebarOpen, setPageTitle }) {
+export default function ContainerAs({ pageTitle, isSidebarOpen, setIsSidebarOpen, setPageTitle }) {
   const [selectedLink, setSelectedLink] = useState(null);
   const handleLinkSelect = (link) => {
     setSelectedLink(link);

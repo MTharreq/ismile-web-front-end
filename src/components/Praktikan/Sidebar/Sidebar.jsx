@@ -2,7 +2,7 @@
 import { NavLink } from 'react-router-dom'
 
 export default function Sidebar({setPageTitle, isSidebarOpen, setIsSidebarOpen, handleLinkSelect,selectedLink}) {
-    const itemStyle = "flex items-center p-2 rounded-lg gap-3 px-3 py-4"
+    const itemStyle = "flex items-center p-2 rounded-lg gap-3 px-3 py-4 w-full"
     const activeItemStyle = `${itemStyle} bg-[#4DD7BE] text-white`
     const inactiveItemStyle = `${itemStyle} bg-white text-gray-900 hover:bg-[#CAF3EB] hover:text-[#1CAB43]`
     const itemsStyle = ({ isActive, isPending }) =>
