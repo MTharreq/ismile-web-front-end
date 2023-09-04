@@ -52,8 +52,10 @@ export default function AppBar({pageTitle, isSidebarOpen, setIsSidebarOpen}) {
               <li className='mb-1'><Link to="/profile">Profile</Link></li>
               <li className='mb-1'><Link to="/change-pass">Change Password</Link></li>
               <hr className="border-[1px] border-gray-300 mb-1" />
-              <li className="font-semibold text-[#D5546D] mb-1">Log Out</li>
-              {/* Add more menu items as needed */}
+              <a href="/">
+                <li className="font-semibold text-[#D5546D] mb-1">Log Out</li>
+              </a>
+
             </ul>
           </div>
         )}
